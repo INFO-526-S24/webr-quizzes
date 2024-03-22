@@ -1,0 +1,39 @@
+---
+title: "Interactive R Code Module"
+subtitle: "INFO 526 - Reading Quizzes R Code Module"
+author: 
+  - name: "Greg Chism"
+    affiliations:
+      - name: "School of Information, University of Arizona"
+description: "Interactive R Code module for students to play with R code in a web browser"
+format:
+   html:
+    code-tools: true
+    code-overflow: wrap
+    embed-resources: true
+editor: visual
+execute:
+  warning: false
+  echo: false
+filters:
+  - webr
+webr:
+  channel-type: "automatic"
+  packages: ['palmerpenguins', 'ggplot2', 'dplyr']
+---
+
+## Usage instructions
+
+This is a functioning [WebR](https://docs.r-wasm.org/webr/latest/) R live code chunk for usage in INFO 526 Reading Quizzes.
+
+-   For a list of `webr` available packages, check [here](https://repo.r-wasm.org/).
+
+-   To install packages, use `webr::install()`
+
+```{webr-r}
+# Load penguins
+data(penguins)
+
+penguins |> 
+  head()
+```
