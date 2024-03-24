@@ -30,10 +30,39 @@ This is a functioning [WebR](https://docs.r-wasm.org/webr/latest/) R live code c
 
 -   To install packages, use `webr::install()`
 
+## Reading Quiz #2
+
+### Question 5
+
 ```{webr-r}
 # Load penguins
 data(penguins)
 
 penguins |> 
   head()
+```
+
+## Reading Quiz #3
+
+### Question 4
+
+```{webr-r}
+# Load mtcars
+data("mtcars")
+
+# Create mtcars1
+mtcars1 <- mtcars |>
+  select(mpg, disp, am) |>
+  filter(mpg > 20)
+
+# Create mtcars2
+mtcars2 <- mtcars |>
+  select(mpg, disp) |>
+  filter(mpg <= 20)
+
+# Plotting
+ggplot(mtcars1, aes(x = disp, y = mpg)) +
+  geom_point() +
+  facet_wrap(~ am) +
+  geom_point(data = mtcars2, color = "red")
 ```
