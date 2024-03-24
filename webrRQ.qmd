@@ -30,9 +30,9 @@ This is a functioning [WebR](https://docs.r-wasm.org/webr/latest/) R live code c
 
 -   To install packages, use `webr::install()`
 
-## Reading Quiz #2
+## Reading Quiz #1
 
-### Question 5
+### Question 6
 
 ```{webr-r}
 # Load penguins
